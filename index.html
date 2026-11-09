@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SA Opportunity Hub | By OyisaTech</title>
+
+<meta name="description" content="Discover South African bursaries, jobs, learnerships, internships, university and college opportunities.">
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f7fc;
+  color: #17243a;
+}
+
+header {
+  background: #082c5c;
+  color: white;
+  padding: 17px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #ffbd45;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 8px;
+  font-size: 14px;
+}
+
+.hero {
+  background: linear-gradient(120deg,#082c5c,#1264c5);
+  color: white;
+  padding: 75px 7%;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 42px;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  font-size: 17px;
+  margin-bottom: 25px;
+}
+
+.search {
+  max-width: 650px;
+  margin: auto;
+  display: flex;
+  background: white;
+  padding: 7px;
+  border-radius: 10px;
+}
+
+.search input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 13px;
+  font-size: 16px;
+  min-width: 0;
+}
+
+.search button {
+  background: #ffbd45;
+  border: none;
+  padding: 13px 22px;
+  border-radius: 7px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+section {
+  padding: 45px 7%;
+}
+
+h2 {
+  color: #082c5c;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #68758a;
+  margin-bottom: 25px;
+}
+
+.categories {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 15px;
+}
+
+.category {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #e1e8f0;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.category:hover {
+  transform: translateY(-4px);
+  border-color: #1264c5;
+}
+
+.category .icon {
+  font-size: 32px;
+}
+
+.category h3 {
+  color: #082c5c;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.opportunities {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 18px;
+}
+
+.card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  border: 1px solid #e1e8f0;
+}
+
+.tag {
+  display: inline-block;
+  background: #e7f1ff;
+  color: #1264c5;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  margin-bottom: 12px;
+}
+
+.card h3 {
+  color: #082c5c;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #68758a;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.apply {
+  display: inline-block;
+  background: #1264c5;
+  color: white;
+  text-decoration: none;
+  padding: 10px 17px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+.apply:hover {
+  background: #082c5c;
+}
+
+.empty {
+  background: white;
+  padding: 25px;
+  text-align: center;
+  border-radius: 10px;
+  color: #68758a;
+  grid-column: 1/-1;
+}
+
+.about {
+  background: #e8f2ff;
+  line-height: 1.8;
+}
+
+footer {
+  background: #082044;
+  color: white;
+  padding: 30px 7%;
+  text-align: center;
+  line-height: 1.8;
+}
+
+footer a {
+  color: #ffbd45;
+  text-decoration: none;
+}
+
+@media(max-width:800px) {
+  .categories {
+    grid-template-columns: repeat(2,1fr);
+  }
+  .opportunities {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media(max-width:550px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+  nav {
+    width: 100%;
+  }
+  nav a {
+    display: inline-block;
+    margin: 5px;
+  }
+  .hero {
+    padding: 55px 5%;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+  .opportunities {
+    grid-template-columns: 1fr;
+  }
+  .search {
+    flex-direction: column;
+  }
+  .search button {
+    width: 100%;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">SA <span>OPPORTUNITY HUB</span></div>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#categories">Categories</a>
+    <a href="#opportunities">Opportunities</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <h1>Your Future Starts Here!</h1>
+
+  <p>
+    Discover bursaries, jobs, learnerships,
+    internships and study opportunities in South Africa.
+  </p>
+
+  <div class="search">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="Search for opportunities..."
+    >
+    <button onclick="searchOpportunities()">Search</button>
+  </div>
+</div>
+
+<section id="categories">
+
+  <h2>Explore Categories</h2>
+  <p class="subtitle">
+    Find the opportunity that matches your future.
+  </p>
+
+  <div class="categories">
+
+    <div class="category" onclick="filterCategory('Bursary')">
+      <div class="icon">🎓</div>
+      <h3>Bursaries</h3>
+    </div>
+
+    <div class="category" onclick="filterCategory('Jobs')">
+      <div class="icon">💼</div>
+      <h3>Jobs</h3>
+    </div>
+
+    <div class="category" onclick="filterCategory('Learnership')">
+      <div class="icon">📚</div>
+      <h3>Learnerships</h3>
+    </div>
+
+    <div class="category" onclick="filterCategory('University')">
+      <div class="icon">🏫</div>
+      <h3>Universities & Colleges</h3>
+    </div>
+
+    <div class="category" onclick="filterCategory('Internship')">
+      <div class="icon">💻</div>
+      <h3>Internships</h3>
+    </div>
+
+    <div class="category" onclick="filterCategory('Artisan')">
+      <div class="icon">🔧</div>
+      <h3>Artisan Careers</h3>
+    </div>
+
+    <div class="category" onclick="filterCategory('Training')">
+      <div class="icon">🚀</div>
+      <h3>Skills & Training</h3>
+    </div>
+
+    <div class="category" onclick="showAll()">
+      <div class="icon">🌍</div>
+      <h3>All Opportunities</h3>
+    </div>
+
+  </div>
+</section>
+
+<section id="opportunities">
+
+  <h2>Explore Opportunities</h2>
+  <p class="subtitle">
+    Browse useful official opportunity portals.
+  </p>
+
+  <div class="opportunities" id="opportunityList">
+
+    <div class="card" data-category="Bursary">
+      <span class="tag">Bursary</span>
+      <h3>NSFAS Student Funding</h3>
+      <p>Explore financial aid for eligible South African students.</p>
+      <a class="apply"
+         href="https://www.nsfas.org.za/"
+         target="_blank" rel="noopener">
+         Visit NSFAS
+      </a>
+    </div>
+
+    <div class="card" data-category="Jobs">
+      <span class="tag">Jobs</span>
+      <h3>SAYouth Opportunities</h3>
+      <p>Explore employment and learning opportunities for young people.</p>
+      <a class="apply"
+         href="https://sayouth.mobi/"
+         target="_blank" rel="noopener">
+         Explore Opportunities
+      </a>
+    </div>
+
+    <div class="card" data-category="University">
+      <span class="tag">University</span>
+      <h3>University Applications</h3>
+      <p>Discover South African universities and their admission information.</p>
+      <a class="apply"
+         href="https://www.dhet.gov.za/"
+         target="_blank" rel="noopener">
+         Visit DHET
+      </a>
+    </div>
+
+    <div class="card" data-category="Learnership">
+      <span class="tag">Learnership</span>
+      <h3>SETA Opportunities</h3>
+      <p>Explore skills development and training opportunities through SETAs.</p>
+      <a class="apply"
+         href="https://www.dhet.gov.za/"
+         target="_blank" rel="noopener">
+         Visit DHET
+      </a>
+    </div>
+
+    <div class="card" data-category="Internship">
+      <span class="tag">Internship</span>
+      <h3>Government Careers</h3>
+      <p>Explore government information and career announcements.</p>
+      <a class="apply"
+         href="https://www.gov.za/"
+         target="_blank" rel="noopener">
+         Visit Government
+      </a>
+    </div>
+
+    <div class="card" data-category="Artisan">
+      <span class="tag">Artisan Careers</span>
+      <h3>Artisan Career Pathways</h3>
+      <p>Explore information about electrical, welding, plumbing and other trades.</p>
+      <a class="apply"
+         href="https://www.dhet.gov.za/"
+         target="_blank" rel="noopener">
+         Explore DHET
+      </a>
+    </div>
+
+    <div class="card" data-category="Training">
+      <span class="tag">Training</span>
+      <h3>Skills Development</h3>
+      <p>Explore official skills development and training information.</p>
+      <a class="apply"
+         href="https://www.dhet.gov.za/"
+         target="_blank" rel="noopener">
+         Visit DHET
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<section class="about" id="about">
+
+  <h2>About SA Opportunity Hub</h2>
+
+  <p>
+    SA Opportunity Hub is a youth-focused platform
+    created by OyisaTech to help South Africans
+    discover educational, employment, funding
+    and skills development opportunities.
+  </p>
+
+  <p>
+    Our mission is to make opportunities easier
+    to find and access. Always verify application
+    requirements and closing dates with official providers.
+  </p>
+
+  <br>
+  <strong>Dream. Build. Grow.</strong>
+
+</section>
+
+<footer>
+  <h3>SA OPPORTUNITY HUB</h3>
+  <p>By OyisaTech 🇿🇦</p>
+  <p>Connecting South African youth to opportunities.</p>
+  <p>© <span id="year"></span> OyisaTech. All rights reserved.</p>
+</footer>
+
+<script>
+
+function searchOpportunities() {
+  const input = document
+    .getElementById("searchInput")
+    .value.toLowerCase();
+
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    const text = card.innerText.toLowerCase();
+
+    card.style.display =
+      text.includes(input) ? "block" : "none";
+  });
+}
+
+function filterCategory(category) {
+  const cards = document.querySelectorAll(".card");
+
+  cards.forEach(card => {
+    card.style.display =
+      card.dataset.category === category
+      ? "block" : "none";
+  });
+
+  document.getElementById("opportunities")
+    .scrollIntoView({behavior:"smooth"});
+}
+
+function showAll() {
+  document.querySelectorAll(".card").forEach(card => {
+    card.style.display = "block";
+  });
+}
+
+document.getElementById("searchInput")
+.addEventListener("input", searchOpportunities);
+
+document.getElementById("year").textContent =
+new Date().getFullYear();
+
+</script>
+
+</body>
+  </html>
+  
